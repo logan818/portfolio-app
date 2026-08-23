@@ -1,0 +1,57 @@
+.experience {
+  max-width: 640px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+.experience__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.experience h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.experience__empty {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.entry {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.entry__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.entry__header h3 {
+  font-size: 1.2rem;
+}
+
+.entry__company {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.entry__location {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin: 0.4rem 0;
+}
+
+.entry__description {
+  line-height: 1.6;
+  opacity: 0.85;
+}
