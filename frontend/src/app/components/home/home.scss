@@ -1,0 +1,25 @@
+.hero {
+  max-width: 640px;
+  padding: 6rem 2rem 4rem;
+  margin: 0 auto;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.hero__lede {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.75;
+}
