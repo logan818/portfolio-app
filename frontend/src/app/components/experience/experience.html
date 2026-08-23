@@ -1,10 +1,10 @@
 <section class="experience">
   <p class="experience__eyebrow">~/experience</p>
   <h2>Where I've worked</h2>
-  <p class="experience__empty" *ngIf="entries.length === 0">
+  <p class="experience__empty" *ngIf="entries().length === 0">
     No entries yet — add some to the database to see them here.
   </p>
-  <div class="entry" *ngFor="let job of entries">
+  <div class="entry" *ngFor="let job of entries()">
     <div class="entry__header">
       <h3>{{ job.title }}</h3>
       <span class="entry__company">{{ job.company }}</span>

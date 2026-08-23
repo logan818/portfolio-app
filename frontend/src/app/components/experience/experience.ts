@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceService } from '../../services/experience';
 
@@ -10,11 +10,11 @@ import { ExperienceService } from '../../services/experience';
 })
 export class Experience implements OnInit {
   private experienceService = inject(ExperienceService);
-  entries: any[] = [];
+  entries = signal<any[]>([]);
 
   ngOnInit(): void {
     this.experienceService.getExperience().subscribe((data) => {
-      this.entries = data;
+      this.entries.set(data);
     });
   }
 }
