@@ -1,0 +1,8 @@
+[
+  {
+    "name": "portfolio-app",
+    "description": "This site — Angular, Flask, and PostgreSQL portfolio.",
+    "url": "https://github.com/logan818/portfolio-app",
+    "tech_stack": ["Angular", "Flask", "PostgreSQL"]
+  }
+]

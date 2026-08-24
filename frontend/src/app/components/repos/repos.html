@@ -1,0 +1,16 @@
+<section class="repos">
+  <p class="repos__eyebrow">~/repos</p>
+  <h2>Projects</h2>
+  <p class="repos__empty" *ngIf="repos().length === 0">
+    No repos yet.
+  </p>
+  <div class="repo-grid">
+    <a class="repo-card" *ngFor="let repo of repos()" [href]="repo.url" target="_blank" rel="noopener">
+      <h3>{{ repo.name }}</h3>
+      <p>{{ repo.description }}</p>
+      <div class="repo-card__tags">
+        <span class="tag" *ngFor="let tech of repo.tech_stack">{{ tech }}</span>
+      </div>
+    </a>
+  </div>
+</section>

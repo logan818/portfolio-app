@@ -37,4 +37,7 @@ def create_app():
     from app.routes.education import education_bp
     app.register_blueprint(education_bp, url_prefix="/api")
 
+    from app.routes.repos import repos_bp
+    app.register_blueprint(repos_bp, url_prefix="/api")
+
     return app
