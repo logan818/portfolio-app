@@ -10,6 +10,7 @@
       <span class="entry__company">{{ job.company }}</span>
     </div>
     <p class="entry__location">{{ job.location }}</p>
+    <p class="entry__dates">{{ job.start_date | date:'MMM yyyy' }} – {{ job.current ? 'Present' : (job.end_date | date:'MMM yyyy') }}</p>
     <p class="entry__description">{{ job.description }}</p>
   </div>
 </section>
@@ -26,6 +27,7 @@
       <span class="entry__company">{{ school.school }}</span>
     </div>
     <p class="entry__location">{{ school.location }}</p>
+        <p class="entry__dates">{{ school.start_date | date:'MMM yyyy' }} – {{ school.current ? 'Present' : (school.end_date | date:'MMM yyyy') }}</p>
     <p class="entry__description">{{ school.description }}</p>
   </div>
 </section>
