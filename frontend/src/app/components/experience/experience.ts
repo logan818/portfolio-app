@@ -14,6 +14,15 @@ export class Experience implements OnInit {
   private educationService = inject(EducationService);
   entries = signal<any[]>([]);
   schoolEntries = signal<any[]>([]);
+  skills: string[] = [
+    'ServiceNow Administration',
+    'CMDB',
+    'ITSM',
+    'ITIL',
+    'JavaScript',
+    'Python',
+    'Angular',
+  ];
 
   ngOnInit(): void {
     this.experienceService.getExperience().subscribe((data) => {

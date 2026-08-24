@@ -1,13 +1,58 @@
-.experience {
-  max-width: 640px;
-  padding: 4rem 2rem 1rem;
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.experience {
+  padding: 4rem 0 1rem;
 }
 
 .school {
-  max-width: 640px;
-  padding: 1rem 2rem 4rem;
-  margin: 0 auto;
+  padding: 1rem 0 4rem;
+}
+
+.page__skills {
+  padding-top: 4rem;
+}
+
+.skills__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.page_skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.page__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skills__list li {
+  font-family: var(--font-mono);
+  front-size: 0.9rem;
+  padding: 0.4rem 0.7rem;
+  background: var(--paper-dim);
+  border-radius: 4px;
+  border-left: 2px solid var (--accent);
 }
 
 .experience__eyebrow {
