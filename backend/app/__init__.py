@@ -1,6 +1,4 @@
 import os
-from turtle import dot
-from blinker.base import F
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -9,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 db = SQLAlchemy()
+
 
 def create_app():
     app = Flask(__name__)
@@ -29,7 +28,13 @@ def create_app():
     frontend_origin = os.environ.get("FRONTEND_ORIGIN", "http://localhost:4200")
     CORS(app, resources={r"/api/*": {"origins": frontend_origin}})
 
-    from app.models import experience #noqa: F401
+    from app.models import experience  # noqa: F401
+    from app.models import education  # noqa: F401
+
     from app.routes.experience import experience_bp
     app.register_blueprint(experience_bp, url_prefix="/api")
+
+    from app.routes.education import education_bp
+    app.register_blueprint(education_bp, url_prefix="/api")
+
     return app

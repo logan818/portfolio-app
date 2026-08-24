@@ -13,3 +13,19 @@
     <p class="entry__description">{{ job.description }}</p>
   </div>
 </section>
+
+<section class="school">
+  <p class="school__eyebrow">~/school</p>
+  <h2>Where I went to school</h2>
+  <p class="school__empty" *ngIf="schoolEntries().length === 0">
+    No entries yet — add some to the database to see them here.
+  </p>
+  <div class="entry" *ngFor="let school of schoolEntries()">
+    <div class="entry__header">
+      <h3>{{ school.degree }}</h3>
+      <span class="entry__company">{{ school.school }}</span>
+    </div>
+    <p class="entry__location">{{ school.location }}</p>
+    <p class="entry__description">{{ school.description }}</p>
+  </div>
+</section>
