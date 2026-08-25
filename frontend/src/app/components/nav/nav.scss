@@ -16,6 +16,7 @@
 
 .nav__links {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -33,4 +34,30 @@
 .nav__links a.active {
   opacity: 1;
   color: var(--accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  color: var(--accent);
+  opacity: 0.85;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  border-color: var(--accent);
 }

@@ -10,6 +10,13 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+:root.dark {
+  --ink: #f0efeb;
+  --paper: #14171c;
+  --paper-dim: #1e2229;
+  --border: #2a2e35;
+}
+
 * {
   box-sizing: border-box;
 }
