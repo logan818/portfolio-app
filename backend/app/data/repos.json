@@ -4,5 +4,11 @@
     "description": "This site — Angular, Flask, and PostgreSQL portfolio.",
     "url": "https://github.com/logan818/portfolio-app",
     "tech_stack": ["Angular", "Flask", "PostgreSQL"]
+  },
+  {
+    "name": "100-days-of-code",
+    "description": "100 Days of Coding Challange on Udemey.",
+    "url": "https://github.com/logan818/100-days-of-code",
+    "tech_stack": ["Python"]
   }
 ]
