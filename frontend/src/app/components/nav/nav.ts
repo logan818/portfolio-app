@@ -11,6 +11,7 @@ import { RouterLinkActive } from '@angular/router';
 })
 export class Nav {
   isDark = signal(localStorage.getItem('theme') === 'dark');
+  isMenuOpen = signal(false);
 
   constructor() {
     this.applyTheme();
@@ -22,7 +23,16 @@ export class Nav {
     this.applyTheme();
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen.set(!this.isMenuOpen());
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen.set(false);
+  }
+
   private applyTheme(): void {
     document.documentElement.classList.toggle('dark', this.isDark());
   }
+
 }
