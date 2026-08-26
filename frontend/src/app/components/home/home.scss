@@ -59,3 +59,17 @@
   width: 20px;
   height: 20px;
 }
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero__lede {
+    font-size: 1rem;
+  }
+}

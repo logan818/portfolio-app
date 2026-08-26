@@ -1,9 +1,19 @@
 <nav class="nav">
-  <a class="nav__brand" routerLink="/">~/portfolio</a>
-  <div class="nav__links">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">~/home</a>
-    <a routerLink="/experience" routerLinkActive="active">~/experience</a>
-    <a routerLink="/repos" routerLinkActive="active">~/repos</a>
+  <a class="nav__brand" routerLink="/" (click)="closeMenu()">~/portfolio</a>
+
+  <button class="hamburger" (click)="toggleMenu()" [attr.aria-label]="isMenuOpen() ? 'Close menu' : 'Open menu'">
+    <svg *ngIf="!isMenuOpen()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </svg>
+    <svg *ngIf="isMenuOpen()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </svg>
+  </button>
+
+  <div class="nav__links" [class.nav__links--open]="isMenuOpen()">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">~/home</a>
+    <a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">~/experience</a>
+    <a routerLink="/repos" routerLinkActive="active" (click)="closeMenu()">~/repos</a>
     <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
       <svg *ngIf="!isDark()" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="4"/>
